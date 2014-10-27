@@ -1,0 +1,129 @@
+// Variables //
+
+$base-font-size: 9px;
+$base-line-height: 14px;
+
+// Colors //
+// Color Pallete from http://danmalarkey.github.io/schema/
+
+// Background, Page Titles
+$brown: rgba(84, 48, 26, 1);
+// Page Numbers
+$brown-dark: rgba(108, 90, 78, 1);
+// Paragraph Text
+$gray: rgba(128, 127, 131, 1);
+
+$white: rgba(255, 255, 255, 1);
+$bg-red: rgba(#CE3F3F, 1);
+$black: rgba(0, 0, 0, 1);
+$bg-black: rgba(0, 0, 0, 1);
+
+$font-serif: Helvetica-Neue;
+$font-sans: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+$font-sans-b: TradeGothic-BoldTwo;
+$font-sans-l: TradeGothic-Light;
+$font-sans-lo: TradeGothic-LightOblique;
+$font-blok: BLOKKNeue-Regular;
+
+@function em($px, $base: $base-font-size){
+  @return($px / $base) * 1em;
+}
+
+// Breakpoints //
+@mixin breakpoint($point) {
+  @if $point == palm {
+    @media (max-width: 470px)  { @content; }
+  }
+  @else if $point == lap {
+    @media (min-width: 768px)  { @content; }
+  }
+  @else if $point == portable {
+    @media (min-width: 980px) { @content; }
+  }
+  @else if $point == desk {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $point == giant {
+    @media (min-width: 1600px)  { @content; }
+  }
+  @else if $point == spaceship {
+    @media (min-width: 1900px)  { @content; }
+  }
+}
+
+
+
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+
+  @each $value in $values {
+
+    @if $value == 0 or $value == auto {
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+
+    @else {
+      $unit: unit($value);
+      $val: parseInt($value);
+
+      @if $unit == "px" {
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 16 + rem));
+      }
+
+      @if $unit == "rem" {
+        $px : append($px,  ($val * 16 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {
+    #{$property}: $px;
+  } @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+
+#slidr-home-demo>div {
+  line-height: 285px;
+  width: 100%;
+  height: 100%;
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: -3px;
+  color: white
+}
+
+#slidr-home-demo {
+  height: 768px;
+  margin: 0 auto
+}
+#slidr-individual {
+  height: 468px;
+  margin: 0 auto
+}
+#slidr-home-demo>img {
+  line-height: 285px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: -3px;
+  color: white
+}
+.demo-slides img{
+  width: 100%;
+  height: auto;
+}

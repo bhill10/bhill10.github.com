@@ -1,0 +1,81 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding-top: 0;
+  font-family: $font-sans;
+  @include rem(font-size, 16px);
+  @include rem(line-height, 24px);
+}
+
+body, input, button  {
+  -webkit-font-smoothing: antialiased;
+}
+
+.h1, h1 {
+}
+
+.h2, h2 {
+  font-weight: 600;
+  @include rem(font-size, 38px);
+  @include rem(line-height, 48px);
+  @include rem(margin, 0 0 24px);
+}
+
+.h3, h3 {
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  // VIDEOS
+  text-transform: uppercase;
+  @include rem(margin-bottom, 100px);
+  span {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.h4, h4 {
+  font-family: CenturyGothic;
+  font-size: 24px;
+  color: #555555;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+
+p {
+  font-family: CenturyGothic;
+  color: #444;
+  line-height: 1.75em;
+  @include rem(font-size, 20px);
+  //@include rem(line-height, 32px);
+  //@include rem(margin-bottom, 32px);
+}
+
+
+%strong-emphasis {
+  font-weight: 700;
+}
+
+strong {
+  @extend %strong-emphasis;
+}
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

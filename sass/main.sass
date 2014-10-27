@@ -1,0 +1,363 @@
+@import fixed-responsive-nav
+@import fluidbox
+@import overlay
+@import csswizardry-grids
+@import normalize
+@import settings
+@import base
+
+*
+  box-sizing: border-box
+  list-style-type: none
+  text-decoration: none
+  letter-spacing: 0
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+/*layout
+
+.content
+  +rem(padding-top, 100px)
+  +rem(padding-bottom, 100px)
+
+.standard
+  max-width: 860px
+  margin: 0 auto
+
+.content *+*
+  +rem(padding-top, 32px)
+
+%container
+  margin-top: 2em
+  position: relative
+  z-index: 0
+  //max-width: 1200px
+  margin: 0 auto
+
+hr
+  border: 1px solid $black
+
+.wrapper--header
+  background: $bg-black
+
+.sticky-header
+  background-color: #4a90e2
+
+.hero
+  background: #4A90E2
+
+.hero-text
+  font-family: AvenirNext-UltraLight
+  font-size: 64px
+  color: #FFFFFF
+  line-height: 87px
+  height: 0
+  text-align: center
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 2
+
+.hero-subtext
+  font-family: CenturyGothic-Bold
+  font-size: 24px
+  width: 100%
+  color: #FFF
+  line-height: 29px
+  text-align: center
+
+.video-gallery
+  background-color: $bg-black
+  color: $white
+  .demo-slides
+    overflow: visible !important
+    margin: 0 auto
+
+.about-us
+  background-color: $white
+  font-family: CenturyGothic
+  font-size: 24px
+  color: #4A90E2
+  line-height: 29px
+  img
+    max-width: 150px
+    margin: 0 auto
+    border-radius: 50%
+    margin-bottom: 24px
+  p
+    font-family: CenturyGothic
+    font-size: 14px
+    color: #9B9B9B
+    line-height: 16px
+    max-width: 700px
+    margin: 0 auto
+    text-align: center
+
+.equipment
+  background-color: $bg-red
+  color: $white
+  p
+    max-width: 700px
+    margin: 0 auto
+    text-align: center
+
+.equipment__primary
+  @extend .equipment
+  background-color: $white
+  color: $black
+  p
+    +rem(margin-bottom, 100px)
+    text-align: left
+  article
+    position: relative
+    width: 824px
+    margin: 0 auto
+    img
+      position: relative
+      +rem(top, -150px)
+      +rem(width, 400px)
+
+.equipment__secondary
+  @extend .equipment__primary
+  background-color: $bg-red
+  color: $white
+  article
+    img
+      +rem(width, 315px)
+  p
+    text-align: left
+
+.equipment__tertiary
+
+video
+  max-width: 100%
+  height: auto
+
+iframe,embed,object
+  max-width: 100%
+
+.gallery
+  @extend %container
+
+.photo-gallery
+  background: $white
+  color: $black
+  h3
+    span
+      border-bottom: 1px solid #000
+  li
+    //overflow: hidden
+  img
+    width: 200px
+
+.the-crew
+  background-color: $bg-black
+  color: $white
+  font-family: AvenirNext-Regular
+  font-size: 20px
+  line-height: 35px
+
+.split
+  text-align:right
+  list-style:none
+  margin-left: 0
+
+.split__title
+  text-align: left
+  float: left
+  clear: left
+
+.staff-bio
+  width: 824px
+  min-height: 284px
+  margin: 0 auto
+  position: relative
+  +rem(margin-bottom, 100px)
+  p
+    width: 400px
+    font-family: AvenirNext-Regular
+    font-size: 20px
+    line-height: 35px
+  img
+    width: 200px
+    height: 200px
+    border-radius: 50%
+    background-color: aliceblue
+  dl
+    color: $white
+    text-align: center
+
+.staff-pic
+  width: 200px
+  height: 300px
+  //position: absolute
+  //right: 0
+  //top: 0
+
+
+.contact-form
+  background-color: $bg-black
+  color: $white
+  form
+    @extend %container
+    color: #fff
+    label
+      display: block
+      font-size: 20px
+      line-height: 24px
+      font-weight: bold
+      text-transform: uppercase
+    input
+      font-size: 24px
+      width: 336px
+      height: 50px
+      border: 4px solid $white
+      color: $white
+      background-color: $black
+      &:focus
+        color: $black
+        background-color: $white
+    input.full-field
+      width: 700px
+      height: 300px
+
+.form-item
+  //float: left
+  text-align: center
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  +rem(margin-bottom, 46px)
+  &:nth-child(2n+1)
+    //clear: left
+    //+rem(margin-right, 28px)
+
+.overlay .trigger-overlay
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+
+.overlay
+  z-index: 2
+  background: $white
+
+.overlay .overlay-close
+  font-size: 80px
+  color: $bg-red
+
+.g
+  //overflow: hidden
+  display: inline-block
+  li
+    float: left
+    width: 50%
+  img
+    display: block
+    width: 100%
+  li:nth-child(odd)
+    clear: left
+
+@media screen and (min-width: 40em)
+  .g li
+    width: 33.3333333333333333%
+    &:nth-child(3n+1)
+      clear: left
+    &:nth-child(odd)
+      clear: none
+
+@media screen and (min-width: 55em)
+  .g li
+    width: 25%
+    &:nth-child(4n+1)
+      clear: left
+    &:nth-child(3n+1)
+      clear: none
+
+@media screen and (min-width: 72em)
+  .g li
+    width: 20%
+    &:nth-child(5n+1)
+      clear: left
+    &:nth-child(4n+1)
+      clear: none
+
+@media screen and (min-width: 90em)
+  .g li
+    width: 16.666666666%
+    &:nth-child(6n+1)
+      clear: left
+    &:nth-child(5n+1)
+      clear: none
+
+.list li
+  border-bottom: 1px solid #ccc
+  display: table
+  border-collapse: collapse
+  width: 100%
+
+.inner
+  display: table-row
+  overflow: hidden
+
+.li-img
+  display: table-cell
+  vertical-align: middle
+  width: 40%
+  padding-right: 1em
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.li-text
+  display: table-cell
+  vertical-align: middle
+  width: 60%
+
+.li-head, .li-sub
+  margin: 0
+
+@media all and (min-width: 40em)
+  .list
+    padding: 0.5em
+    max-width: 70em
+    margin: 0 auto
+    overflow: hidden
+    li
+      padding: 0.5em
+      display: block
+      width: 50%
+      float: left
+      background: none
+      border: 0
+  .inner
+    display: block
+  .li-img, .li-text, .inner
+    display: block
+    width: auto
+    padding: 0
+  .li-text
+    padding: 0.5em 0
+
+@media all and (min-width: 60em)
+  .list li
+    width: 33.33333333%
+
+.demo-slides
+  aside[id="slidr-video-control"].border
+    .slidr-control.right
+      right: -80px
+    .slidr-control.left
+      left: -80px
+
+.col-group > div
+  padding: 1em 1em 0
+
+@media screen and (min-width: 50em)
+  .col-group
+    margin: 0 auto
+    max-width: 864px
+    overflow: hidden
+
+  .col-group > div
+    float: left
+    width: 33.3333333%
