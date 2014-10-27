@@ -3511,6 +3511,12 @@ iframe, embed, object {
   margin: 0;
 }
 
+.faq-list {
+  padding-top: 157px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
 @media all and (min-width: 40em) {
   .list {
     padding: 0.5em;
