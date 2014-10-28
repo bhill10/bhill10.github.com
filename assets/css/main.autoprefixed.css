@@ -3861,7 +3861,6 @@ h4 {
   font-size: 24px;
   color: #555555;
   line-height: 24px;
-  margin-bottom: 10px;
 }
 
 p {
@@ -3994,10 +3993,14 @@ hr {
 }
 
 .about-us img {
+  display: block;
   max-width: 150px;
   margin: 0 auto;
   border-radius: 50%;
-  margin-bottom: 24px;
+}
+
+.about-us h4 {
+  text-align: center;
 }
 
 .about-us p {
