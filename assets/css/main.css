@@ -1,4 +1,56 @@
 @charset "UTF-8";
+.parallax-background, .hero {
+  background-color: #4a90e2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+}
+
+.intro-text, .hero-text {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.parallax-content, .wrapper {
+  max-width: 100%;
+  position: relative;
+  top: 500px;
+}
+
+.split {
+  text-align: right;
+  list-style: none;
+  margin-left: 0;
+}
+
+.split__title {
+  text-align: left;
+  float: left;
+  clear: left;
+}
+
+.split__left {
+  text-align: left;
+}
+
+.footer__icons, .nav {
+  list-style: none;
+  margin-left: 0;
+}
+.footer__icons > li,
+.footer__icons > li > a, .nav > li,
+.nav > li > a {
+  display: inline-block;
+}
+
+.footer__icons > li > a {
+  display: inline-block;
+  zoom: 1;
+}
+
 /* =============================================
  *
  *   FIXED RESPONSIVE NAV
@@ -3047,11 +3099,6 @@ a:-webkit-any-link {
   margin: 0 auto;
 }
 
-#slidr-individual {
-  height: 468px;
-  margin: 0 auto;
-}
-
 #slidr-home-demo > img {
   line-height: 285px;
   width: 100%;
@@ -3110,10 +3157,11 @@ body, input, button {
 }
 
 .h4, h4 {
-  font-family: CenturyGothic;
-  font-size: 24px;
+  font-family: CenturyGothic-Bold;
   color: #555555;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 17px;
+  /* Foreclosure: */
 }
 
 p {
@@ -3168,8 +3216,18 @@ strong {
 }
 
 .content * + * {
-  padding-top: 32px;
-  padding-top: 2rem;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+
+.solid-bg {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.white-bg {
+  background-color: white;
+  color: #4a90e2;
 }
 
 .gallery, .contact-form form {
@@ -3192,7 +3250,7 @@ hr {
 }
 
 .hero {
-  background: #4A90E2;
+  background: #4a90e2;
 }
 
 .hero-text {
@@ -3200,11 +3258,7 @@ hr {
   font-size: 64px;
   color: #FFFFFF;
   line-height: 87px;
-  height: 0;
   text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   z-index: 2;
 }
 
@@ -3230,7 +3284,7 @@ hr {
   background-color: white;
   font-family: CenturyGothic;
   font-size: 24px;
-  color: #4A90E2;
+  color: #4a90e2;
   line-height: 29px;
 }
 .about-us img {
@@ -3479,6 +3533,12 @@ iframe, embed, object {
     clear: none;
   }
 }
+.list {
+  padding-top: 157px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
 .list li {
   border-bottom: 1px solid #ccc;
   display: table;
@@ -3513,10 +3573,101 @@ iframe, embed, object {
   margin: 0;
 }
 
-.faq-list {
-  padding-top: 157px;
-  padding-left: 80px;
-  padding-right: 80px;
+.faq-list h4, .list-of-links h4 {
+  font-size: 14px;
+  line-height: 23px;
+}
+.faq-list p, .list-of-links p {
+  font-family: Helvetica-Light;
+  font-size: 14px;
+  color: #FFFFFF;
+  line-height: 23px;
+}
+
+.faq-list p {
+  color: #555;
+}
+
+.list-of-links {
+  background: #4a90e2;
+  color: white;
+}
+.list-of-links h4 {
+  color: #FFFFFF;
+}
+.list-of-links li:hover {
+  cursor: pointer;
+}
+.list-of-links li:hover h4, .list-of-links li:hover p {
+  color: #F8E71C;
+}
+
+.faq-hero {
+  height: 320px;
+  height: 20rem;
+}
+
+.footer {
+  background: #4a90e2;
+}
+.footer * {
+  color: white;
+}
+.footer p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.footer__icons {
+  width: 603px;
+  width: 37.6875rem;
+  height: 48px;
+  height: 3rem;
+  margin: 1 auto;
+}
+.footer__icons li {
+  height: 32px;
+  height: 2rem;
+}
+.footer__icons li > a {
+  height: 32px;
+  height: 2rem;
+}
+
+.footer__form input {
+  color: white;
+  background-color: #4a90e2;
+  border: 2px solid white;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 17px;
+  line-height: 1.0625rem;
+  padding-left: 14px;
+  padding-left: 0.875rem;
+  height: 48px;
+  height: 3rem;
+  width: 240px;
+  width: 15rem;
+}
+.footer__form input.placeholder {
+  color: white;
+}
+.footer__form input:-moz-placeholder {
+  color: white;
+}
+.footer__form input::-webkit-input-placeholder {
+  color: white;
+}
+.footer__form input.placeholder {
+  color: white;
+}
+.footer__form input:-moz-placeholder {
+  color: white;
+}
+.footer__form input::-webkit-input-placeholder {
+  color: white;
 }
 
 @media all and (min-width: 40em) {
