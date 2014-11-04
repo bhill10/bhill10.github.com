@@ -1,6 +1,35 @@
 @charset "UTF-8";
 
 
+table {
+  margin: 0;
+  padding: 0;
+}
+
+table th,
+table td {
+  padding: 10px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+table th {
+  border-width: 2px;
+}
+
+table td {
+  color: #666;
+}
+
+table tr:last-child th,
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:nth-child(even) {
+  background: #eee;
+}
+
 .parallax-background,
 .hero {
   background-color: #4a90e2;
@@ -3974,9 +4003,18 @@ strong {
   margin: 0 auto;
 }
 
-.content * + * {
-  margin-bottom: 32px;
-  margin-bottom: 2rem;
+.standard > * + * {
+  padding-top: 32px;
+  padding-top: 2rem;
+}
+
+.standard ul > * + * {
+  padding-top: 32px;
+  padding-top: 2rem;
+}
+
+.standard table {
+  margin: 0 auto;
 }
 
 .solid-bg {
