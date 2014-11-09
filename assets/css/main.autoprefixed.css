@@ -37,21 +37,38 @@ table tr:nth-child(even) {
   background-size: cover;
   position: fixed;
   width: 100%;
+  height: 820px;
 }
 
 .intro-text,
 .hero-text {
-  font-size: 50px;
+  margin-top: 10%;
+}
+
+.intro-text p,
+.hero-text p {
+  text-transform: uppercase;
   color: #fff;
   text-align: center;
-  margin-top: 15%;
 }
 
 .parallax-content,
 .wrapper {
   max-width: 100%;
   position: relative;
-  top: 500px;
+  top: 720px;
+}
+
+.parallax-icon {
+  padding-top: 164px;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .split {
@@ -244,7 +261,6 @@ header {
   font-weight: bold;
   line-height: 55px;
   padding: 0 20px;
-  color: #fff;
   float: left;
 }
 
@@ -332,7 +348,6 @@ header {
   border-top: 1px solid white;
   text-decoration: none;
   padding: 0.7em 1em;
-  color: #fff;
   width: 100%;
   float: left;
 }
@@ -382,8 +397,6 @@ header {
 }
 
 .nav-toggle:before {
-  color: #fff;
-  /* Edit this to change the icon color */
   font: normal 28px/55px "responsivenav";
   /* Edit font-size (28px) to change the icon size */
   text-transform: none;
@@ -3855,10 +3868,6 @@ table {
   outline: none;
 }
 
-a:-webkit-any-link {
-  color: #fff;
-}
-
 #slidr-home-demo > div {
   line-height: 285px;
   width: 100%;
@@ -3898,7 +3907,8 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   padding-top: 0;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-family: Raleway;
+  color: #444;
   font-size: 16px;
   font-size: 1rem;
   line-height: 24px;
@@ -3939,19 +3949,41 @@ h3 span {
 
 .h4,
 h4 {
-  font-family: CenturyGothic-Bold;
-  color: #555555;
+  font-family: Raleway;
   font-size: 14px;
   line-height: 17px;
   /* Foreclosure: */
 }
 
 p {
-  font-family: CenturyGothic;
-  color: #444;
+  font-family: Raleway;
   line-height: 1.75em;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.alpha {
+  font-size: 70px;
+}
+
+.beta {
+  font-size: 50px;
+}
+
+.gamma {
+  font-size: 30px;
+}
+
+.delta {
+  font-size: 24px;
+}
+
+.epsilon {
   font-size: 20px;
-  font-size: 1.25rem;
+}
+
+.zeta {
+  font-size: 18px;
 }
 
 strong {
@@ -4001,6 +4033,11 @@ strong {
 .standard {
   max-width: 860px;
   margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.standard img {
+  width: 100%;
 }
 
 .standard > * + * {
@@ -4018,13 +4055,18 @@ strong {
 }
 
 .solid-bg {
-  background-color: #4a90e2;
+  background-color: #00c4f1;
   color: white;
 }
 
 .white-bg {
   background-color: white;
-  color: #4a90e2;
+  color: #333333;
+}
+
+.grey-bg {
+  background-color: #404040;
+  color: white;
 }
 
 .gallery,
@@ -4036,23 +4078,36 @@ strong {
 }
 
 hr {
-  border: 1px solid black;
+  border: 1px solid #333333;
 }
 
 .wrapper--header {
-  background: black;
+  background-color: #333333;
 }
 
 .sticky-header {
-  background-color: #4a90e2;
+  background-color: white;
+  color: #00c4f1;
+}
+
+.sticky-header li:hover {
+  background-color: #00c4f1;
+  color: white;
+}
+
+.sticky-header a:hover {
+  color: white;
+}
+
+.sticky-header a:visited {
+  color: #00c4f1;
 }
 
 .hero {
-  background: #4a90e2;
+  background-color: #00c4f1;
 }
 
 .hero-text {
-  font-family: AvenirNext-UltraLight;
   font-size: 64px;
   color: #FFFFFF;
   line-height: 87px;
@@ -4061,7 +4116,6 @@ hr {
 }
 
 .hero-subtext {
-  font-family: CenturyGothic-Bold;
   font-size: 24px;
   width: 100%;
   color: #FFF;
@@ -4069,22 +4123,19 @@ hr {
   text-align: center;
 }
 
-.video-gallery {
-  background-color: black;
-  color: white;
+.thirsty {
+  font-weight: bold;
 }
 
-.video-gallery .demo-slides {
-  overflow: visible !important;
+.quote p,
+.center {
+  display: block;
+  text-align: center;
   margin: 0 auto;
 }
 
-.about-us {
-  background-color: white;
-  font-family: CenturyGothic;
-  font-size: 24px;
-  color: #4a90e2;
-  line-height: 29px;
+.quote p {
+  max-width: 960px;
 }
 
 .about-us img {
@@ -4095,17 +4146,32 @@ hr {
 }
 
 .about-us h4 {
+  font-size: 18px;
   text-align: center;
+  padding-top: 32px;
 }
 
 .about-us p {
-  font-family: CenturyGothic;
   font-size: 14px;
-  color: #9B9B9B;
-  line-height: 16px;
+  line-height: 1.4;
+  text-align: center;
   max-width: 700px;
   margin: 0 auto;
-  text-align: center;
+  padding-top: 32px;
+}
+
+.testimonial__image {
+  width: 250px !important;
+}
+
+.testimonial__image img {
+  border-radius: 50%;
+  padding: 10px;
+  border: 3px solid #00c4f1;
+}
+
+.testimonial__person p {
+  padding: 0;
 }
 
 .equipment,
@@ -4126,7 +4192,7 @@ hr {
 .equipment__primary,
 .equipment__secondary {
   background-color: white;
-  color: black;
+  color: #333333;
 }
 
 .equipment__primary p,
@@ -4166,6 +4232,15 @@ hr {
   text-align: left;
 }
 
+.tab-list li {
+  font-size: 20px;
+  color: #00c4f1;
+}
+
+.tab-list li p {
+  color: #333333;
+}
+
 video {
   max-width: 100%;
   height: auto;
@@ -4178,8 +4253,8 @@ object {
 }
 
 .photo-gallery {
-  background: white;
-  color: black;
+  background-color: white;
+  color: #333333;
 }
 
 .photo-gallery h3 span {
@@ -4188,14 +4263,6 @@ object {
 
 .photo-gallery img {
   width: 200px;
-}
-
-.the-crew {
-  background-color: black;
-  color: white;
-  font-family: AvenirNext-Regular;
-  font-size: 20px;
-  line-height: 35px;
 }
 
 .split {
@@ -4242,7 +4309,7 @@ object {
 }
 
 .contact-form {
-  background-color: black;
+  background-color: #333333;
   color: white;
 }
 
@@ -4264,11 +4331,11 @@ object {
   height: 50px;
   border: 4px solid white;
   color: white;
-  background-color: black;
+  background-color: #333333;
 }
 
 .contact-form form input:focus {
-  color: black;
+  color: #333333;
   background-color: white;
 }
 
@@ -4297,7 +4364,7 @@ object {
 
 .overlay {
   z-index: 2;
-  background: white;
+  background-color: white;
 }
 
 .overlay .overlay-close {
@@ -4431,7 +4498,6 @@ object {
 .list-of-links p {
   font-family: Helvetica-Light;
   font-size: 14px;
-  color: #FFFFFF;
   line-height: 23px;
 }
 
@@ -4439,22 +4505,8 @@ object {
   color: #555;
 }
 
-.list-of-links {
-  background: #4a90e2;
-  color: white;
-}
-
-.list-of-links h4 {
-  color: #FFFFFF;
-}
-
 .list-of-links li:hover {
   cursor: pointer;
-}
-
-.list-of-links li:hover h4,
-.list-of-links li:hover p {
-  color: #F8E71C;
 }
 
 .faq-hero {
@@ -4463,7 +4515,7 @@ object {
 }
 
 .footer {
-  background: #4a90e2;
+  background-color: #00c4f1;
 }
 
 .footer * {
@@ -4482,12 +4534,15 @@ object {
   width: 37.6875rem;
   height: 48px;
   height: 3rem;
-  margin: 1 auto;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .footer__icons li {
   height: 32px;
   height: 2rem;
+  width: 32px;
+  padding-right: 86px;
 }
 
 .footer__icons li > a {
@@ -4495,9 +4550,14 @@ object {
   height: 2rem;
 }
 
+.footer__icons img {
+  position: relative;
+  top: 14px;
+}
+
 .footer__form input {
   color: white;
-  background-color: #4a90e2;
+  background-color: #00c4f1;
   border: 2px solid white;
   font-size: 14px;
   font-size: 0.875rem;
