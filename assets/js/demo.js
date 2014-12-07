@@ -29,17 +29,17 @@ var Optimizations = {
 var MaintainHomepageGrid = {
 };
 
-var SlidrCarousel = {
-    init: function (){
-        var s = slidr.create('slidr-hero')
-        var vs = slidr.create('slidr-video')
-        s.add('h', ['one', 'two', 'three', 'one']);
-        s.auto();
+//var SlidrCarousel = {
+    //init: function (){
+        //var s = slidr.create('slidr-hero')
+        //var vs = slidr.create('slidr-video')
+        //s.add('h', ['one', 'two', 'three', 'one']);
+        //s.auto();
 
-        vs.add('h', ['one', 'two', 'three', 'one']);
-        vs.start();
-    } // End init function
-};
+        //vs.add('h', ['one', 'two', 'three', 'one']);
+        //vs.start();
+    //} // End init function
+//};
 
 var Overlay = {
     init: function() {
@@ -79,8 +79,21 @@ var Fluidbox = {
     }
 }
 
-SlidrCarousel.init();
-//Overlay.init();
+var ToggleList = {
+    init: function() {
+
+        $(' .tab-list li ').on('click', function(){
+            $(this).next().slideToggle( "slow", function() {
+                // Animation complete.
+            });
+        });
+
+    }
+}
+
+
+//SlidrCarousel.init();
+ToggleList.init();
 //Fluidbox.init();
 //FitVids.init();
 //MainNavToggle.init();
