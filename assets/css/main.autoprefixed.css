@@ -31,13 +31,14 @@ table tr:nth-child(even) {
 }
 
 .parallax-background,
-.hero {
+.hero,
+.our-skills {
   background-color: #4a90e2;
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
   width: 100%;
-  height: 820px;
+  height: 620px;
 }
 
 .intro-text,
@@ -56,7 +57,7 @@ table tr:nth-child(even) {
 .wrapper {
   max-width: 100%;
   position: relative;
-  top: 720px;
+  top: 620px;
 }
 
 .parallax-icon {
@@ -446,6 +447,10 @@ header {
   padding: 0.7em 1em;
   width: 100%;
   float: left;
+}
+
+.nav-collapse a:hover {
+  color: #fff;
 }
 
 @media screen and (min-width: 40em) {
@@ -4159,7 +4164,7 @@ strong {
 }
 
 .solid-bg {
-  background-color: #00c4f1;
+  background-color: #00c6f2;
   color: white;
 }
 
@@ -4189,26 +4194,30 @@ hr {
   background-color: #333333;
 }
 
+.sticky-header li a:visited {
+  color: #00c6f2;
+}
+
+.sticky-header li:hover a {
+  color: #fff;
+}
+
 .sticky-header {
   background-color: white;
-  color: #00c4f1;
+  color: #00c6f2;
 }
 
 .sticky-header li:hover {
-  background-color: #00c4f1;
-  color: white;
-}
-
-.sticky-header a:hover {
-  color: white;
-}
-
-.sticky-header a:visited {
-  color: #00c4f1;
+  background-color: #00c6f2;
 }
 
 .hero {
-  background-color: #00c4f1;
+  background-color: #00c6f2;
+  background-image: url("file:///Users/andrewsolomon/Downloads/Atlanta_Skyline.jpg");
+}
+
+.our-skills {
+  background-color: #00c6f2;
 }
 
 .hero-text {
@@ -4229,6 +4238,17 @@ hr {
 
 .thirsty {
   font-weight: bold;
+}
+
+.hero .thirsty {
+  background-color: rgba(24, 49, 82, 0.7);
+}
+
+.disclosure {
+  font-size: 50px;
+  position: relative;
+  top: 10px;
+  margin-right: 10px;
 }
 
 .quote p,
@@ -4271,7 +4291,7 @@ hr {
 .testimonial__image img {
   border-radius: 50%;
   padding: 10px;
-  border: 3px solid #00c4f1;
+  border: 3px solid #00c6f2;
 }
 
 .testimonial__person p {
@@ -4338,7 +4358,7 @@ hr {
 
 .tab-list li {
   font-size: 20px;
-  color: #00c4f1;
+  color: #00c6f2;
 }
 
 .tab-list li p {
@@ -4613,13 +4633,26 @@ object {
   cursor: pointer;
 }
 
+.icon-inline {
+  width: 32px;
+  margin-right: 1rem;
+}
+
+.icon-inline img {
+  width: 32px;
+}
+
+.color-blue {
+  color: #00c6f2;
+}
+
 .faq-hero {
   height: 320px;
   height: 20rem;
 }
 
 .footer {
-  background-color: #00c4f1;
+  background-color: #00c6f2;
 }
 
 .footer * {
@@ -4661,7 +4694,7 @@ object {
 
 .footer__form input {
   color: white;
-  background-color: #00c4f1;
+  background-color: #00c6f2;
   border: 2px solid white;
   font-size: 14px;
   font-size: 0.875rem;
